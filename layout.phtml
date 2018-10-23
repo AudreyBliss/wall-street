@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projet Wall'Street</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="<?= $template !== 'home' ? '../public/css/style.css' : 'public/css/style.css' ?> " rel="stylesheet" />
+        <link href="<?= $template !== 'home' ? '../public/css/normalize.css' : 'public/css/normalize.css' ?>"rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <?php if(!is_null($admin)): var_dump($admin);die;?>
+                
+                    <!-- Links d'admin -->
+                    <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
+                    <img src="<?= $template !== 'home' ? '../public/img/logo2.png' : 'public/img/logo2.png '?>" alt="Wall-Street"/>
+                    </a>
+                    <a href="<?= $template !== 'home' ? 'showWorksArt' : 'controllers/showWorksArt' ?>.php?">Liste des oeuvres</a>
+                    <a href="<?= $template !== 'home' ? 'showArtist' : 'controllers/showArtist' ?>.php?">Liste des artistes</a>
+                    
+                    
+                    <a href="#"><span>Hello Admin <?= $admin['email'] ?></span></a>
+                    <a href="<?= $template !== 'home' ? '../controllers/login' : 'controllers/login' ?>.php?logout=true">Logout</a>
+                <?php else: ?>
+                    <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
+                    <img src="<?= $template !== 'home' ? '../public/img/logo2.png' : 'public/img/logo2.png '?>" alt="Wall-Street"/>
+                    </a>
+                    <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
+                    <a href="<?= $template !== 'home' ? 'submitWorksArt' : 'controllers/submitWorksArt' ?>.php">Ajouter une oeuvre</a>
+                <?php endif; ?>
+            </nav>
+        </header>
+            
+
+        <main>
+            <?php include 'templates/'. $template .'.phtml' ?>
+        </main>
+
+        <footer>
+            <p>Site crée par Audrey Poul</p>
+        </footer>
+        
+    </body>
+</html>

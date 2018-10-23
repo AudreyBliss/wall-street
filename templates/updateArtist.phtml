@@ -1,0 +1,33 @@
+
+<form class="" action="updateArtist" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Modifier un artiste</legend>
+        <ul>
+            
+            <li>
+                <label for="artiste">Nom de l'artiste :</label>
+                <select id="artiste" name="artiste">
+                    <?php foreach($artistresult as $artist): ?>
+                        <option value="<?= intval($artiste['Id']) ?>"><?= htmlspecialchars($artiste['Name']) ?>) ?></option>
+                    <?php endforeach ?>
+                </select>
+            </li>
+
+            <li>
+                <label for="photo">Photo :</label>
+                <input id="photo" name="photo" type="file">
+            </li>
+
+           
+            <li>
+                
+                <a class="" href="">Annuler</a>  
+           
+                <button class="" type="submit">Modifier</button>
+                
+            </li>
+
+        </ul>
+    </fieldset>
+
+    </form> 

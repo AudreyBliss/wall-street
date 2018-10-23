@@ -1,0 +1,49 @@
+
+    <section>
+        <h1>Ajouter une oeuvre</h1>
+        <p>blablabla</p>
+    </section>
+    
+    <section>
+        
+        <form class="" action="../controllers/submitWorksArt.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Partager une oeuvre</legend>
+                <ul>
+                    <li>
+                        <label for="artiste">Artiste :</label>
+                        <select id="artiste" name="artiste">
+                            <?php foreach($artistes as $artiste): ?>
+                                <option value="<?= intval($artiste['Id']) ?>"><?= htmlspecialchars($artiste['Name']) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="title">Titre de l'oeuvre :</label>
+                        <input type="text" id="title" name="title">
+                    </li>
+
+                    <li>
+                        <label for="photo">Photo :</label>
+                        <input id="photo" name="photo" type="file">
+                    </li>
+
+                    <li>
+                        <label class="textarea" for="contents">Localisation :</label>
+                        <textarea id="localisation" name="localisation" rows="15"></textarea>
+                    </li>
+                    <li>
+                        <label for="date">Date :</label>
+                        <input type="text" id="date" name="date">
+                    </li>
+                
+                    <li>
+                        <button class="" type="submit">Soumettre</button>
+                        
+                    </li>
+                </ul>
+            </fieldset>
+
+        </form>
+
+    </section>

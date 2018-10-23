@@ -1,0 +1,32 @@
+<table class="">
+<a href="addArtist.php">Ajouter un nouvel artiste</a>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Photo</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th></th>
+                
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($artistResult as $artist): ?>
+            <tr>
+                <td><a href="showArtist.php?id=<?=intval($artist['id'])?>"><?=htmlspecialchars($artist['nom'])?></a></td>
+                <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt="<?=htmlspecialchars($artist['nom'])?>"></td>
+                <td><?= $artist['description'] ?><?=substr(htmlspecialchars($artist['description']), 0, 100)?></td>
+                <td><?=htmlspecialchars($artist['date'])?></td>
+                <td>
+                   
+                    <a href="deleteArtist.php?id=<?=intval($artist['id'])?>">Supprimer</a>
+                    <a href="updateArtist.php?id=<?=intval($artist['id'])?>">Modifier</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+    
+
+
+        

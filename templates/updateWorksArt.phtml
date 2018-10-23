@@ -1,0 +1,48 @@
+
+<form class="" action="" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Modifier une oeuvre</legend>
+        <ul>
+            
+            <li>
+                <label for="title">Titre de l'oeuvre :</label>
+                <input type="text" id="title" name="title">
+            </li>
+            
+            
+            <li>
+                <label for="artiste">Nom de l'artiste :</label>
+                <select id="artiste" name="artiste">
+                    <?php foreach($artiste as $artiste): ?>
+                        <option value="<?= intval($artiste['Id']) ?>"><?= htmlspecialchars($artiste['Name']) ?>) ?></option>
+                    <?php endforeach ?>
+                </select>
+            </li>
+
+            <li>
+                <label for="photo">Photo :</label>
+                <input id="photo" name="photo" type="file">
+            </li>
+
+            <li>
+                <label class="textarea" for="localisation">Localisation :</label>
+                <textarea id="localisation" name="localisation" rows="15"></textarea>
+            </li>
+
+            <li>
+                <label for="date">Date :</label>
+                <input type="text" id="date" name="date">
+            </li>
+           
+            <li>
+                
+                <a class="" href="">Annuler</a>  
+           
+                <button class="" type="submit">Modifier</button>
+                
+            </li>
+
+        </ul>
+    </fieldset>
+
+    </form> 
