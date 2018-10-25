@@ -1,7 +1,7 @@
 <?php
 // Dépendances
 require_once '../config/database.php';
-
+$admin = null;
 // Variables
 //$errorMessage = [];
 
@@ -37,8 +37,8 @@ if(empty($_POST)) {
     //$_GET->destroy();
     //unset($admin['id']);
     
-    session_destroy();
-    $_SESSION = [];
+    session_destroy($_GET['logout']);
+    //$_SESSION = [];
 
 
     //$_SESSION['admin']->destroy;
