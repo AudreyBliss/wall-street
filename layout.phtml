@@ -7,17 +7,23 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
         <link href="<?= $template !== 'home' ? '../public/css/style.css' : 'public/css/style.css' ?> " rel="stylesheet" />
         <link href="<?= $template !== 'home' ? '../public/css/normalize.css' : 'public/css/normalize.css' ?>"rel="stylesheet">
     </head>
     <body>
         <header>
+        
             <nav>
-                <?php if(!is_null($admin)):?>
+                
+                <?php if(!is_null($admin)) :?>
+                
                 
                     <!-- Links d'admin -->
                     <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
-                    <img src="<?= $template !== 'home' ? '../public/img/logo2.png' : 'public/img/logo2.png '?>" alt="Wall-Street"/>
+                    <img src="<?= $template !== 'home' ? '../public/img/logol2.png' : 'public/img/logol2.png '?>" alt="Wall-Street"/>
                     </a>
                     <a href="<?= $template !== 'home' ? 'showWorksArt' : 'controllers/showWorksArt' ?>.php?">Liste des oeuvres</a>
                     <a href="<?= $template !== 'home' ? 'showArtist' : 'controllers/showArtist' ?>.php?">Liste des artistes</a>
@@ -26,8 +32,9 @@
                     <a href="#"><span>Hello Admin <?= $admin['email'] ?></span></a>
                     <a href="<?= $template !== 'home' ? '../controllers/login' : 'controllers/login' ?>.php?logout=true">Logout</a>
                 <?php else: ?>
+                
                     <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
-                    <img src="<?= $template !== 'home' ? '../public/img/logo2.png' : 'public/img/logo2.png '?>" alt="Wall-Street"/>
+                    <img src="<?= $template !== 'home' ? '../public/img/logol2.png' : 'public/img/logol2.png '?>" alt="Wall-Street"/>
                     </a>
                     <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
                     <a href="<?= $template !== 'home' ? 'submitWorksArt' : 'controllers/submitWorksArt' ?>.php">Ajouter une oeuvre</a>
@@ -43,6 +50,6 @@
         <footer>
             <p>Site crée par Audrey Poul</p>
         </footer>
-        
+        <script type="text/javascript" src="public/js/slider.js"></script>
     </body>
 </html>

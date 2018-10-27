@@ -1,10 +1,17 @@
 <div id="home">
+
     <section class="street-art">
         <h1>Le Street Art</h1>
 
         <article>
             <h2>Qu'est-ce que le Street Art ? </h2>
-            <img src="public/img/streetart2.jpg "alt="Street Art">
+            <figure id="slider" class="slider">
+                <img src="" alt="Photo du slider">
+                <button id="slider-previous" title="Image précédente "><i class="fas fa-angle-left"></i></button>
+                <figcaption></figcaption>
+                <button id="slider-next" title="Image suivante "><i class="fas fa-angle-right"></i></button>
+            </figure>
+            
             <p>Le Street Art est un art développé sous une multitude de formes, dans des endroits publiques ou dans la rue. Le terme englobe la pratique du graffiti, du pochoir, de la projection vidéo, de la création d'affiche, du pastel sur rues et trottoirs...</br>
     C'est est l'une des formes d'art la plus honnête, il n'y a ni élitisme ni battage publicitaire.
     Le Street Art s'expose sur les meilleurs murs qu'une ville puisse offrir et personne n'est dissuadé par le prix de l'entrée.</br>
@@ -17,22 +24,13 @@
         <h3>Les artistes</h3>
         
         <?php foreach($artistResult as $artist): ?>
-            <!-- Link to artist.php qui se trouve dans el repertoire controller/artist.php -->            
+                      
             <a href="/wall-street/controllers/artist.php?id=<?= $artist['id'] ?>">
                 <h4><?= $artist['nom'] ?></h4>
                 <img src="public/img/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>">
             </a>
         <?php endforeach; ?>
-    </section>
+    </section>  
 
-    <?php if(isset($oeuvres)): ?>
-    <section>
-        <h3>Les oeuvres anonymes</h3>
-        <!-- (p>lorem60)*5 -->
+</div> 
 
-        <h4></h4>
-        <img>
-
-    </section>
-    <?php endif; ?>
-</div>

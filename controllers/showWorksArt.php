@@ -1,6 +1,7 @@
 <?php
 
 
+$admin = null;
 require_once '../config/database.php';
 
 // Check si on a récup un id (array__key_exists)

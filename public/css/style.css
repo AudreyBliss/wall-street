@@ -13,15 +13,17 @@ header nav a {
 }
 
 header img {
-    height: 270px;
+    height: 192px;
+    width: 30%;
+    
+    
 }
 
-header nav img {
-    width:30%;
-}
 
 footer {
-    border: 4px solid black;
+    background-color: black;
+    color:white;
+    height: 192px;
 }
 
 main {
@@ -30,10 +32,19 @@ main {
 
 /*********************************************PAGE HOME**************************************************************************/
 #home .street-art article img {
-    width:50%;
+    width :844px;
+    height: 500px;
+    box-shadow: 7px 7px 15px rgba(0,0,1,1);
 }
 
+/*#home .street-art article .fa {
+    display:block;
+}
+*/
+
+
+
 #home .artistes img {
-    width:400px;
+    width: 400px;
     height: 250px;
 }
