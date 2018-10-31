@@ -4,34 +4,49 @@
         <ul>
             <li>
                 <label for="artiste"> Nom de l'Artiste :</label>
-                <input type="text" id="artiste" name="nom">
+                <input type="text" id="nom" name="nom" >
                     
             </li>
 
             <li>
                 <label for="photo">Photo :</label>
                 <input id="photo" name="photo" type="file">
+                
+                
             </li>
 
             <li>
                 <label class="textarea" for="contents">Description :</label>
-                <textarea id="description" name="description" rows="50"></textarea>
+                <textarea id="description" name="description"  rows="50"></textarea>
+                
+                
             </li>
 
-           <li>
+           <!-- <li>
                 <label for="date">Date :</label>
-                <input type="text" id="date" name="date">
-            </li>
+                <input type="text" id="date" name="date" value="">
+            </li> -->
 
             <li>
-                <a class="" href="">Annuler</a>
-            
-                <button class="" type="submit">Enregistrer</button>
-                    
+                <a class="" href="showArtist.php">Annuler</a>
+                <input class="" type="submit" value="Enregistrer">
+                <!-- Il faut utiliser un input pas un button, c'est plus pour le js les bouttons (interactivités) -->
             </li>
+
 
             
         </ul>
         </fieldset>
 </form>
+
+ <div> 
+<?php foreach($showInfo as $infoartiste): ?>
+    <img src="<?= $infoartiste['photo'] ?>">
+    <p><?= $infoartiste['description'] ?></p>
+    <p><?= $infoartiste['nom'] ?></p>
+   <!-- Si tu veux enlever la date supprime cette ligne et la colonne date dans ta bdd, si tu veux ajouter l'heure ajoute timestamp --> 
+<?php endforeach; ?>
+</div>  
+
+
 

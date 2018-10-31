@@ -10,15 +10,27 @@
     </article>
 </section>
 
-<section>
+<section id="gallery">
     <h3>Les oeuvres</h3>
     <?php foreach($worksartResult as $worksart): ?>
         <a href="#">
-            <img src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre'] ?>">
+            <figure>
+                <img src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre'] ?>">
+                <figcaption><?= $worksart['titre'] ?></figcaption>    
+            </figure>
         </a>
     <?php endforeach; ?>
 
-    <button type="submit">Voir +</button>
-</section>
+    
+</section>  
+
+ 
+    
+
+
+
+
+
+    
 
 

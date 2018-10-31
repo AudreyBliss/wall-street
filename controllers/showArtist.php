@@ -6,7 +6,7 @@ require_once '../config/database.php';
 
 try{
     // Test de récupération d'un artist, et je dis bien 1 One
-    $artist = $pdo->prepare('Select id, nom, photo, description From artiste');
+    $artist = $pdo->prepare('Select * From artiste');
     $artist->execute();
     $artistResult = $artist->fetchAll();
 

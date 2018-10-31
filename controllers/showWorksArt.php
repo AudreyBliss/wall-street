@@ -5,7 +5,7 @@ $admin = null;
 require_once '../config/database.php';
 
 // Check si on a récup un id (array__key_exists)
-//if(array_key_exists('id', $_GET) && ctype_digit($_GET['id'])) {
+//if(array_key_exists('id', $_POST) && ctype_digit($_POST['id'])) {
     
     // Get Artist
     //try {
@@ -70,7 +70,7 @@ try{
     echo "Une erreure est survenue : {$e->getMessage()} <br> Voici son code erreur {$e->getCode()}";
 }
 
-
+//}
 /*try{
     // Test de récupération d'un artist, et je dis bien 1 One
     $worksart = $pdo->prepare('Select * From oeuvre Inner join artiste ON nom = nom');

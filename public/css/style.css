@@ -13,8 +13,8 @@ header nav a {
 }
 
 header img {
-    height: 192px;
-    width: 30%;
+    height: 175px;
+    width: 26%;
     
     
 }
@@ -48,3 +48,42 @@ main {
     width: 400px;
     height: 250px;
 }
+
+/**************************************PAGE ARTISTE**********************************************************************************************/
+/*.hide{
+	display:none;
+	opacity:0;
+}
+
+#gallery figure:hover img{
+	opacity:0.5; 
+}
+
+#my-modal{ 
+	background:#fff;
+	border:1px solid #ccc;
+	left:30%;
+	padding:15px;
+	position:absolute;
+	right:30%;
+	text-align:right;
+	top:50px;
+	width:40%;
+}
+
+
+#my-modal .commandes{ 
+	display:flex;
+	justify-content:space-between;
+}
+
+#my-modal .commandes span{
+	cursor:pointer;
+}
+
+#my-modal img{
+	padding-top:5px;
+	width:100%;
+}*/
+
+

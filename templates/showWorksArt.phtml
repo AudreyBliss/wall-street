@@ -12,7 +12,7 @@
     <tbody>
         <?php foreach ($worksartResult as $worksart) : ?>
             <tr>
-                <td><a href="showWorksArt.php?id=<?=intval($worksart['id'])?>"><?=htmlspecialchars($worksart['titre'])?></a></td>
+                <td><?=htmlspecialchars($worksart['titre'])?></td>
                 <td><img src="../public/img/worksart/<?= $worksart['photo'] ?>" alt="<?=htmlspecialchars($worksart['titre'])?>"></td>
                 <td><?=htmlspecialchars($worksart['localisation'])?></td>
                 <td><?=htmlspecialchars($worksart['date'])?></td>
