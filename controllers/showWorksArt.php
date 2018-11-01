@@ -1,9 +1,9 @@
 <?php
 
 
-$admin = null;
-require_once '../config/database.php';
 
+require_once '../config/database.php';
+$admin = null;
 // Check si on a récup un id (array__key_exists)
 //if(array_key_exists('id', $_POST) && ctype_digit($_POST['id'])) {
     

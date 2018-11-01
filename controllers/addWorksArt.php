@@ -76,10 +76,11 @@ function checkInput($data){
 }
 
  
-$nomArtiste = checkInput($_POST['nom']);
-$description = checkInput($_POST['description']);
+$titreOeuvre = checkInput($_POST['titre']);
+$localisation = checkInput($_POST['localisation']);
 
-if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $description)){  /* !empty + isset */      
+
+if(!empty($titreOeuvre) AND !empty($localisation)  AND isset($titreOeuvre, $localisation )){  /* !empty + isset */      
     
 
     $file_name = $_FILES['photo']['name'];  /*  pour comprendre la variable $_FILES >>> http://php.net/manual/fr/features.file-upload.post-method.php     */
@@ -99,9 +100,9 @@ if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $descript
         
                 if(move_uploaded_file($file_tmp_name, $file_destination)){  /* déplace fichier de son emplacement temporaire vers ta bdd */
                     
-                    $req = $pdo->prepare("INSERT INTO artiste (photo, description, nom) VALUES(?, ?, ?)");		
-                    $req->execute(array($file_destination, $description, $nomArtiste));
-                    echo 'fichiers envoyé avec succès';	
+                    $req = $pdo->prepare("INSERT INTO oeuvre (photo, localisation, titre) VALUES(?, ?,? )");		
+                    $req->execute(array($file_destination, $titreOeuvre, $localisation));
+                    header('Location: showWorksArt.php');	
         
                 }else{
                     echo 'image n a pas été envoyé';
@@ -119,6 +120,94 @@ if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $descript
 }else{
     echo 'files vide, tout le champs ne sont pas rempli';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

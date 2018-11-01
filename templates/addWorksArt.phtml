@@ -9,14 +9,7 @@
             </li>
             
             
-            <li>
-                <label for="artiste">Nom de l'artiste :</label>
-                <select id="artiste" name="artiste">
-                    <?php foreach($artistes as $artiste): ?>
-                        <option value="<?= intval($artiste['id']) ?>"><?= htmlspecialchars($artiste['nom']) ?>) ?></option>
-                    <?php endforeach ?>
-                </select>
-            </li>
+            
 
             <li>
                 <label for="photo">Photo :</label>
@@ -29,10 +22,7 @@
                 <textarea id="localisation" name="localisation" rows="15"></textarea>
             </li>
 
-            <li>
-                <label for="date">Date :</label>
-                <input type="text" id="date" name="date">
-            </li>
+            
            
             <li>
                 

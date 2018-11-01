@@ -1,0 +1,25 @@
+<table class="">
+<a href="addWorksArt.php">Ajouter une nouvelle oeuvre</a>
+    <thead>
+        <tr>
+            <th>Titre de l'oeuvre</th>
+            <th>Photo</th>
+            <th>Localisation</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($worksartResult as $worksart) : ?>
+            <tr>
+                <td><a href="showWorksArt.php?id=<?=intval($worksart['id'])?>"><?=htmlspecialchars($worksart['titre'])?></a></td>
+                <td><img src="../public/img/worksart/<?= $worksart['photo'] ?>" alt="<?=htmlspecialchars($worksart['titre'])?>"></td>
+                <td><?=htmlspecialchars($worksart['localisation'])?></td>
+                <td>
+                     
+                    <a href="deleteWorksArt.php?id=<?=intval($worksart['id'])?>">Supprimer</a>
+                    <a href="updateWorksArt.php?id=<?=intval($worksart['id'])?>">Modifier</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
