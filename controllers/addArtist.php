@@ -289,6 +289,7 @@ $nomArtiste = checkInput($_POST['nom']);
 $description = checkInput($_POST['description']);
 
 if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $description)){  /* !empty + isset */      
+    
 
     $file_name = $_FILES['photo']['name'];  /*  pour comprendre la variable $_FILES >>> http://php.net/manual/fr/features.file-upload.post-method.php     */
     $file_type = $_FILES['photo']['type'];
@@ -309,7 +310,7 @@ if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $descript
                     
                     $req = $pdo->prepare("INSERT INTO artiste (photo, description, nom) VALUES(?, ?, ?)");		
                     $req->execute(array($file_destination, $description, $nomArtiste));
-                    echo 'fichiers envoyé avec succès';	
+                    header("location: showArtist.php");	
         
                 }else{
                     echo 'image n a pas été envoyé';
