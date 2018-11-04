@@ -1,29 +1,51 @@
+<div id="artiste">
 
-<section>
-    <h1>bla</h1>
-    <article>
-        <h2>
-            <?= $artist['nom'] ?>
-        </h2>
-        <img src="<?= $pathToPic ?>/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>">
-        <p><?= $artist['description'] ?></p>
-    </article>
-</section>
+    <section class="presentation">
+        <h1>Présentation de l'artiste</h1>
+        <article>
+            <h2>
+                <?= $artist['nom'] ?>
+            </h2>
+            <img src="<?= $pathToPic ?>/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>">
+            <p><?= $artist['description'] ?></p>
+        </article>
+    </section>
 
-<section id="gallery">
-    <h3>Les oeuvres</h3>
-    <?php foreach($worksartResult as $worksart): ?>
-        <a href="#">
-            <figure>
-                <img src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre'] ?>">
-                <figcaption><?= $worksart['titre'] ?></figcaption>    
-            </figure>
-        </a>
-    <?php endforeach; ?>
+    <section id="gallery">
+        <h3>Les oeuvres</h3>
+        <?php foreach($worksartResult as $worksart): ?>
+            <a href="#">
+                <figure>
+                    <img src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre'] ?>">
+                    <figcaption><?= $worksart['titre'] ?></figcaption>    
+                </figure>
+            </a>
+        <?php endforeach; ?>
 
+    </section>
     
-</section>  
+    <!-- <div id="my-modal" class="hide">
+			<div class="commandes">
+				<div class="prev-next">
+					<span>< Prev</span>
+					<span> | </span>
+					<span>Next ></span>
+				</div>
+				<span class="close-modal">FERMER X</span>
+			</div>
+			
+			<img src="" alt="" />
+		</div> -->
 
+
+
+
+
+
+
+
+
+</div>
  
     
 

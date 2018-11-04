@@ -1,39 +1,116 @@
+/***************************************************************************************************************************************
+*************************************************MOBILE FIRST*****************************************************************************/
+
 /***********************************************LAYOUT*******************************************************************************/
+*{
+    box-sizing: border-box;
+}
+
 
 header {
     
-    background-image:url(../img/header.jpg);
-    background-position:center center;
-    background-size:cover;
-    
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+	background-size: cover;
+	height: 145px;
+	
+	   
 }
 
-header nav a {
-    color:white;
+header  div a  {
+	/* display:flex;
+    flex-direction:column;
+	align-items:center; */
+	color:white;
+	text-align: center;
+	
+}
+
+header nav div  {
+	
+	/* display:flex; */
+	/*text-align: center;*/
+	
 }
 
 header img {
-    height: 175px;
-    width: 26%;
-    
-    
+	height: 93px;
+	width: 165px;
+	float: left;
+	margin: 20px 0 9px 9px
+	
 }
 
 
 footer {
     background-color: black;
     color:white;
-    height: 192px;
+    padding: 15px;
+	margin-top: 30px ;
 }
 
-main {
-    padding:20px;
+
+
+
+/**********************************************CSS Général****************************************************************************/
+body{
+	margin:0 auto;
+	font-family: 'Poor Story', cursive;
+	line-height:1.4;
+	text-align: center;
+}
+
+/* main{
+	padding: 20px;
+} */
+
+main a{
+	text-align: left;
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+}
+
+article p{
+	padding:0 40px;
+}
+
+h1{
+	text-shadow: 5px 0px 0.2em rgb(150, 8, 39);
+	font-size: 1.4 em;
+	padding-top: 30px;
+}
+
+h2{
+	text-shadow: 5px 0px 0.2em rgb(237, 227, 30);
+	font-size: 1.2 em;
+	padding: 20px 0;
+}
+
+h3{
+	text-shadow: 5px 0px 0.2em rgb(71, 122, 227);
+	font-size: 1 em;
+	padding: 20px 0;
+}
+
+h1, h2, h3{
+	font-family: 'Rock Salt', cursive;
+}
+
+h2,h3{
+	text-align: left;
+}
+
+a{
+	text-decoration: none;
+	color:black;
 }
 
 /*********************************************PAGE HOME**************************************************************************/
+#home{
+	padding: 0 20px;
+}
+
 #home .street-art article img {
-    width :844px;
-    height: 500px;
+    width :100%;
     box-shadow: 7px 7px 15px rgba(0,0,1,1);
 }
 
@@ -41,49 +118,65 @@ main {
     display:block;
 }
 */
+#home .street-art .fas{
+	background-color: none;
 
+}
 
 
 #home .artistes img {
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    height: 90%;
 }
 
+#home figure{
+	/* display: flex; */
+	margin: 0;
+}
+
+#home figure .align-button{
+	/* justify-content: center; */
+
+}
 /**************************************PAGE ARTISTE**********************************************************************************************/
-/*.hide{
-	display:none;
-	opacity:0;
+ #artiste .presentation, h3{
+	padding: 0 20px;
+} 
+
+#gallery img{
+	width: 100%;
+	/* padding: 0px; */
 }
 
-#gallery figure:hover img{
-	opacity:0.5; 
+/* #artiste #gallery a{
+	margin:0px;	
+} */
+
+/****************************************PAGE LOGIN******************************************************************************************************/
+
+
+
+/****************************************PAGE SHOWWORKSART/SHOWARTIST**************************************************************************************************/
+#showWorksArt, #showArtist {
+	margin: 20px 5px;
+	/* text-align: justify; */
 }
 
-#my-modal{ 
-	background:#fff;
-	border:1px solid #ccc;
-	left:30%;
-	padding:15px;
-	position:absolute;
-	right:30%;
-	text-align:right;
-	top:50px;
-	width:40%;
+#showWorksArt th, #showArtist th {
+	padding-top: 30px
 }
 
-
-#my-modal .commandes{ 
-	display:flex;
-	justify-content:space-between;
+#showWorksArt img, #showArtist img{
+	width: 100%;
+	
 }
 
-#my-modal .commandes span{
-	cursor:pointer;
+#showWorksArt .localisation, #showArtist .description{
+	font-size: 0.8em;
+	padding-left:5px;
+	text-align: justify;
 }
 
-#my-modal img{
-	padding-top:5px;
-	width:100%;
-}*/
-
-
+#showWorksArt td, #showArtist td {
+	padding-bottom: 30px
+}

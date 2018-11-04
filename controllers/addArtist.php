@@ -14,12 +14,12 @@ function checkInput($data){
 
 
 $nomArtiste = checkInput($_POST['nom']);
-$description = checkInput($_POST['description']); 
-
+$description = checkInput($_POST['description']);
 
 if(!empty($nomArtiste) AND !empty($description) AND isset($nomArtiste, $description)){  /* !empty + isset */      
     
-
+     
+    
     $file_name = $_FILES['photo']['name'];  /*  pour comprendre la variable $_FILES >>> http://php.net/manual/fr/features.file-upload.post-method.php     */
     $file_type = $_FILES['photo']['type'];
     $file_tmp_name = $_FILES['photo']['tmp_name'];

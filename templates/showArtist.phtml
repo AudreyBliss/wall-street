@@ -1,31 +1,31 @@
-<table class="">
-<a href="addArtist.php">Ajouter un nouvel artiste</a>
-    <thead>
-        <tr>
-            <th>Nom</th>
-            <th>Photo</th>
-            <th>Description</th>
-            <th></th>
-                
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach($artistResult as $artist): ?>
+<div id="showArtist">
+    <table class="">
+    <a href="addArtist.php">Ajouter un nouvel artiste</a>
+        <thead>
             <tr>
-                <td><?=htmlspecialchars($artist['nom'])?></td>
-                <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt=""></td>
-                <td><?=substr(htmlspecialchars($artist['description']), 0, 100)?></td>
-                
-                <td>
-                   
-                    <a href="deleteArtist.php?id=<?=intval($artist['id'])?>">Supprimer</a>
-                    <a href="updateArtist.php?id=<?=intval($artist['id'])?>">Modifier</a>
-                </td>
+                <th>Nom</th>
+                <th>Photo</th>
+                <th>Description</th>
+                <th>Supprimer</th>
+                    
             </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
-    
+        </thead>
+        <tbody>
+            <?php foreach($artistResult as $artist): ?>
+                <tr>
+                    <td><?=htmlspecialchars($artist['nom'])?></td>
+                    <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt=""></td>
+                    <td class="description"><?=substr(htmlspecialchars($artist['description']), 0, 50)?></td>
+                    
+                    <td>
+                    
+                        <a href="deleteArtist.php?id=<?=intval($artist['id'])?>"><i class="fas fa-times"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>    
 
 
         

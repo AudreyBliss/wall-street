@@ -100,7 +100,7 @@ if(!empty($titreOeuvre) AND !empty($localisation)  AND isset($titreOeuvre, $loca
         
                 if(move_uploaded_file($file_tmp_name, $file_destination)){  /* déplace fichier de son emplacement temporaire vers ta bdd */
                     
-                    $req = $pdo->prepare("INSERT INTO oeuvre (photo, localisation, titre) VALUES(?, ?,? )");		
+                    $req = $pdo->prepare("INSERT INTO oeuvre (photo, localisation, titre) VALUES(?, ?,?)");		
                     $req->execute(array($file_destination, $titreOeuvre, $localisation));
                     header('Location: showWorksArt.php');	
         
