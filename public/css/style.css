@@ -26,10 +26,10 @@ header  div a  {
 	
 }
 
-header nav div  {
+header nav   {
 	
 	/* display:flex; */
-	/*text-align: center;*/
+	text-align: center;
 	
 }
 
@@ -49,7 +49,13 @@ footer {
 	margin-top: 30px ;
 }
 
+footer a{
+	color:white;
+}
 
+footer a:hover{
+	color:pink;
+}
 
 
 /**********************************************CSS Général****************************************************************************/
@@ -58,6 +64,7 @@ body{
 	font-family: 'Poor Story', cursive;
 	line-height:1.4;
 	text-align: center;
+	
 }
 
 /* main{
@@ -71,23 +78,25 @@ main a{
 
 article p{
 	padding:0 40px;
+	text-align: center;
+
 }
 
 h1{
 	text-shadow: 5px 0px 0.2em rgb(150, 8, 39);
-	font-size: 1.4 em;
+	font-size: 1.6em;
 	padding-top: 30px;
 }
 
 h2{
 	text-shadow: 5px 0px 0.2em rgb(237, 227, 30);
-	font-size: 1.2 em;
+	font-size: 1.4em;
 	padding: 20px 0;
 }
 
 h3{
 	text-shadow: 5px 0px 0.2em rgb(71, 122, 227);
-	font-size: 1 em;
+	font-size: 1em;
 	padding: 20px 0;
 }
 
@@ -143,7 +152,11 @@ a{
 	padding: 0 20px;
 } 
 
-#gallery img{
+#gallery{
+	margin-top: 40px;
+}
+
+.presentation img, #gallery img{
 	width: 100%;
 	/* padding: 0px; */
 }
