@@ -83,24 +83,25 @@ article p{
 }
 
 h1{
-	text-shadow: 5px 0px 0.2em rgb(150, 8, 39);
+	/* text-shadow: 5px 0px 0.2em rgb(150, 8, 39); */
+	text-shadow: 2px 7px 5px rgb(150, 8, 39), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1.6em;
 	padding-top: 30px;
 }
 
 h2{
-	text-shadow: 5px 0px 0.2em rgb(237, 227, 30);
+	text-shadow:2px 7px 5px rgb(251, 183, 0), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1.4em;
 	padding: 20px 0;
 }
 
 h3{
-	text-shadow: 5px 0px 0.2em rgb(71, 122, 227);
+	text-shadow: 2px 7px 5px rgb(71, 122, 227), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1em;
 	padding: 20px 0;
 }
 
-h1, h2, h3{
+h1, h2, h3,h4{
 	font-family: 'Rock Salt', cursive;
 }
 
@@ -148,7 +149,8 @@ a{
 
 }
 /**************************************PAGE ARTISTE**********************************************************************************************/
- #artiste .presentation, h3{
+
+#artiste .presentation, h3{
 	padding: 0 20px;
 } 
 
@@ -161,13 +163,15 @@ a{
 	/* padding: 0px; */
 }
 
-/* #artiste #gallery a{
-	margin:0px;	
-} */
 
 /****************************************PAGE LOGIN******************************************************************************************************/
+#login h1{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+}
 
-
+#login{
+	background-color: red;
+}
 
 /****************************************PAGE SHOWWORKSART/SHOWARTIST**************************************************************************************************/
 #showWorksArt, #showArtist {
@@ -193,3 +197,187 @@ a{
 #showWorksArt td, #showArtist td {
 	padding-bottom: 30px
 }
+
+
+/**********************************************PAGE ADD ARTIST********************************************************************************************************/
+#add {
+	padding:0 40px;
+}
+
+#add textarea{
+	width: 100%;
+}
+
+#add ul{
+	padding:0px;
+}
+
+#add li{
+	list-style-type: none;
+	text-align: left;
+	padding: 20px 0;
+}
+
+#add label, #add input{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+}
+
+#add .bouton_add{
+	border: 2px solid black;
+	padding: 6px 6px;
+	text-shadow: none;
+	color:white;
+	background-color:rgb(150, 8, 39); 
+	align-self: center;
+	
+}
+
+
+/****************************************************************************************************************************************************************************************************************************************TABLETTE****************************************************************************************/
+
+@media screen and (min-width:768px){
+
+	/******************************************************LAYOUT***********************************************************************************************/
+
+	header{
+		height: 181px;
+	}
+
+	header img {
+		width: 227px;
+		height:121px;
+	}
+
+
+	/******************************************************CSS GENERAL***********************************************************************************************/
+
+	main{
+		padding:0 40px;
+	}
+	
+	main a{
+		text-align: end;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+	h2{
+		font-size: 1.6em;
+	}
+
+	h3{
+		font-size: 1.4em;
+	}
+
+	h4{
+		font-size: 1.2em;
+	}
+
+	/**************************************************** PAGE HOME/ ARTIST *************************************************************************************/
+
+	#artiste figure{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	#artiste figure img, .oeuvre{
+		width:40%;
+		flex-wrap: wrap;
+	}
+	
+
+	.artist img, #artist img{
+
+	/* display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    text-align:center; */
+	}
+
+	/************************************************** PAGE SWOWWORKSART/ SHOWARTIST *******************************************************************************/
+
+	#showWorksArt .localisation, #showArtist .description{
+		font-size: 1em;
+		
+	}
+
+	
+	td, th {
+		padding: 0 20px;
+	} 
+
+}
+
+
+/*****************************************************************************************************************************************************************************************************************************DESKTOP********************************************************************************************************/
+@media screen and (min-width:1024px){
+	
+	/******************************************************LAYOUT***********************************************************************************************/
+
+	header{
+		height: 231px;
+	}
+
+	header img {
+		width: 330px;
+		height:175px;
+	}
+
+	/******************************************************CSS GENERAL***********************************************************************************************/
+
+	body{
+		line-height:1.6;
+		font-size: 1.2em;
+	}
+
+
+	h1{
+		font-size: 2.5em;
+	}
+
+	h2{
+		font-size: 2em;
+	}
+
+	h3{
+		font-size: 1.8em;
+	}
+
+	h4{
+		font-size: 1.6em;
+	}
+
+	/************************************************ HOME *******************************************************************************************************/
+	
+	.slider{
+		padding: 0 110px;
+	}
+
+
+/******************************************************ARTISTE *******************************************************************************************************/
+
+	.colonne{
+		
+		display:inline-block;
+	}
+
+	.presentation img{
+		width: 45%;
+		padding-top: 12px;
+		float:left;
+	}
+
+	.presentation p{
+		float:right;
+		width: 55%;
+		padding-left: 85px;
+	
+	}
+
+	article p{
+		padding:0px;
+	}
+}
+
+

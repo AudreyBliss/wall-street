@@ -1,13 +1,16 @@
 <div id="artiste">
 
     <section class="presentation">
-        <h1>Présentation de l'artiste</h1>
+        <h1>About ...</h1>
+        
         <article>
             <h2>
                 <?= $artist['nom'] ?>
             </h2>
-            <img src="<?= $pathToPic ?>/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>">
-            <p><?= $artist['description'] ?></p>
+            <div class="colonne">
+                <img src="<?= $pathToPic ?>/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>"><!--
+                --><p><?= $artist['description'] ?></p>
+            </div>
         </article>
     </section>
 
@@ -16,15 +19,18 @@
         <?php foreach($worksartResult as $worksart): ?>
             <a href="#">
                 <figure>
-                    <img src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre'] ?>">
-                    <figcaption><?= $worksart['titre'] ?></figcaption>    
+                    <div class="oeuvres">
+                        <img  src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre']  ?>">
+                        <figcaption><?= $worksart['titre'] ?></figcaption>
+                    </div>   
                 </figure>
             </a>
         <?php endforeach; ?>
-
     </section>
+</div>
     
-    <!-- <div id="my-modal" class="hide">
+    
+     <!-- <div id="my-modal" class="hide">
 			<div class="commandes">
 				<div class="prev-next">
 					<span>< Prev</span>
@@ -35,7 +41,12 @@
 			</div>
 			
 			<img src="" alt="" />
-		</div> -->
+        </div> !-->
+        
+        
+
+  
+        
 
 
 
@@ -45,7 +56,6 @@
 
 
 
-</div>
  
     
 

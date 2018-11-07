@@ -1,43 +1,36 @@
-<form class="" action="../controllers/addArtist.php" method="post" enctype="multipart/form-data">
-    <fieldset>
-        <legend>Créer un artiste</legend>
+<div id="add">
+
+    <h1>Ajouter un artiste</h1>
+    <form class="" action="../controllers/addArtist.php" method="post" enctype="multipart/form-data">
+       
         <ul>
+
             <li>
                 <label for="artiste"> Nom de l'Artiste :</label>
                 <input type="text" id="nom" name="nom" >
-                    
+
             </li>
 
             <li>
                 <label for="photo">Photo :</label>
                 <input id="photo" name="photo" type="file">
-                
-                
+                    
             </li>
 
             <li>
                 <label class="textarea" for="contents">Description :</label>
-                <textarea id="description" name="description"  rows="50"></textarea>
-                
-                
+                <textarea id="description" name="description" rows="20" cols="50"></textarea>
             </li>
-
-           <!-- <li>
-                <label for="date">Date :</label>
-                <input type="text" id="date" name="date" value="">
-            </li> -->
 
             <li>
-                <a class="" href="showArtist.php">Annuler</a>
-                <input class="" type="submit" value="Enregistrer">
-                <!-- Il faut utiliser un input pas un button, c'est plus pour le js les bouttons (interactivités) -->
+                <a class="bouton_add" href="showArtist.php">Annuler</a>
+                <input class="bouton_add" type="submit" value="Enregistrer">
             </li>
 
-
-            
         </ul>
-        </fieldset>
-</form>
+            
+    </form>
+</div>
 
  
 
