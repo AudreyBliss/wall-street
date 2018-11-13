@@ -1,14 +1,21 @@
-<form class="" action="../controllers/addWorksArt.php" method="post" enctype="multipart/form-data">
-    <fieldset>
-        <legend>Créer une oeuvre</legend>
+<div id ="add-oeuvre">
+    <h1>Ajouter une oeuvre</h1>
+
+    
+    <form class="" action="../controllers/addWorksArt.php" method="post" enctype="multipart/form-data">
+        
+            
         <ul>
+
+            <li>
+                <label for="nom-artiste">Nom de l'artiste :</label>
+                <input type="text" id="nom-artiste" name="nom-artiste">
+            </li>
             
             <li>
                 <label for="titre">Titre de l'oeuvre :</label>
                 <input type="text" id="title" name="titre">
             </li>
-            
-            
             
 
             <li>
@@ -19,21 +26,20 @@
 
             <li>
                 <label class="textarea" for="contents">Localisation :</label>
-                <textarea id="localisation" name="localisation" rows="15"></textarea>
+                <textarea id="localisation" name="localisation" rows="20" cols="50"></textarea>
             </li>
 
             
-           
             <li>
                 
-                <a class="" href="">Annuler</a>
-                <input class="" type="submit" value="Enregistrer">
+                <a class="bouton_add" href="showWorksArt.php">Annuler</a>
+                <input class="bouton_add" type="submit" value="Enregistrer">
                 
                 
             </li>
 
         </ul>
-    </fieldset>
-
-</form> 
+    
+    </form>
+</div>
 

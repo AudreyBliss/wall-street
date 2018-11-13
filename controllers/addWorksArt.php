@@ -10,7 +10,7 @@ $isEmpty = null;
 if(!empty($_POST['titre']) AND !empty($_POST['localisation']) AND isset($_POST['titre'], $_POST['localisation'])){     /* !empty + isset */ 
 $titre = $_POST['titre'];
 $localisation = $_POST['localisation'];     
-
+$artisteId = $_POST['artiste_id'];
 $file_name = $_FILES['photo']['name'];  /*  pour comprendre la variable $_FILES >>> http://php.net/manual/fr/features.file-upload.post-method.php     */
 $file_type = $_FILES['photo']['type'];
 $file_tmp_name = $_FILES['photo']['tmp_name'];
@@ -30,8 +30,8 @@ $verifOeuvre = $imageOeuvre->rowCount();   /* Compte dans ta colonne photo si le
     
             if(move_uploaded_file($file_tmp_name, $file_destination)){  /* déplace fichier de son emplacement temporaire vers ta bdd */
                 
-                $req = $pdo->prepare("INSERT INTO oeuvre (titre, photo, localisation) VALUES(?, ?, ?)");		
-                $req->execute(array($titre, $file_name, $localisation));
+                $req = $pdo->prepare("INSERT INTO oeuvre (titre, photo, localisation, artiste_id) VALUES(?, ?, ?,?)");		
+                $req->execute(array($titre, $file_name, $localisation, $artisteId));
                     $message = "Téléchargement terminé";
 
                     header('location:showWorksArt.php');

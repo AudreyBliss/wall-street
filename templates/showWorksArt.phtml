@@ -13,7 +13,7 @@
             <?php foreach ($worksartResult as $worksart) : ?>
                 <tr>
                     <td><a href="showWorksArt.php?id=<?=intval($worksart['id'])?>"><?=htmlspecialchars($worksart['titre'])?></a></td>
-                    <td><img src="../public/img/worksart/<?= $worksart['photo'] ?>" alt="<?=htmlspecialchars($worksart['titre'])?>"></td>
+                    <td><img src="../public/img/worksart/<?= $worksart['photo'] ?>" alt="<?=$worksart['titre']?>"></td>
                     <td class="localisation"><?=htmlspecialchars($worksart['localisation'])?></td>
                     <td>
                         <a href="deleteWorksArt.php?id=<?=intval($worksart['id'])?>"><i class="fas fa-times"></i></a>

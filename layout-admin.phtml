@@ -10,9 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
         
-        <link href="<?= $template !== 'home' ? '../public/css/normalize.css' : 'public/css/normalize.css' ?>"rel="stylesheet">
+        <script type="text/javascript" src="public/js/modal.js"></script>
         <link href="<?= $template !== 'home' ? '../public/css/style.css' : 'public/css/style.css' ?> " rel="stylesheet" />
-        
+        <link href="<?= $template !== 'home' ? '../public/css/normalize.css' : 'public/css/normalize.css' ?>"rel="stylesheet">
     </head>
 
     <body>
@@ -20,16 +20,17 @@
         
             <nav>
                 
-                <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
+            <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
                         <img src="<?= $template !== 'home' ? '../public/img/logol2.png' : 'public/img/logol2.png '?>" alt="Wall-Street"/>
-                </a>
-                
-                    <!-- Nav user -->
-                    
+            </a>
                     <div class="acceuil">
-                        <a class="accueil-style" href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
+                        <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
+                        <a href="<?= $template !== 'home' ? 'showWorksArt' : 'controllers/showWorksArt' ?>.php?">Liste des oeuvres</a>
+                        <a href="<?= $template !== 'home' ? 'showArtist' : 'controllers/showArtist' ?>.php?">Liste des artistes</a>
+                        <!-- <a href="<?= $template !== 'home' ? '../controllers/login' : 'controllers/login' ?>.php?logout=true">Logout</a> -->
+                        <a href="<?= $template !== 'home' ? '../controllers/logout' : 'controllers/logout' ?>.php">Logout</a>
                     </div>
-                
+                <
             </nav>
 
         </header>
@@ -45,7 +46,7 @@
             <em><p>Site crée par <a href="mailto:audrey94300@hotmail.fr">Audrey Poul</a></p></em>
         </footer>
         
-        <script type="text/javascript" src="public/js/modal.js"></script>
+        
         <script type="text/javascript" src="public/js/slider.js"></script>
     </body>
 </html>

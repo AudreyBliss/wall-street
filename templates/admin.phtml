@@ -10,33 +10,39 @@
         <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
         
-        <link href="<?= $template !== 'home' ? '../public/css/normalize.css' : 'public/css/normalize.css' ?>"rel="stylesheet">
-        <link href="<?= $template !== 'home' ? '../public/css/style.css' : 'public/css/style.css' ?> " rel="stylesheet" />
         
+        <link href="../public/css/style.css " rel="stylesheet" />
+        <link href="../public/css/normalize.css " rel="stylesheet" />
     </head>
 
-    <body>
+    <body id="admin">
         <header>
         
             <nav>
-                
-                <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
-                        <img src="<?= $template !== 'home' ? '../public/img/logol2.png' : 'public/img/logol2.png '?>" alt="Wall-Street"/>
-                </a>
-                
-                    <!-- Nav user -->
-                    
-                    <div class="acceuil">
-                        <a class="accueil-style" href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
-                    </div>
-                
+                <div class="acceuil">
+                    <a href="../index.php">
+                        <img src=" ../public/img/logol2.png " alt="Wall-Street"/>
+                    </a>
+                        <div class="accueil-style">
+                            <a href="../index.php">Accueil</a>
+                            <a href="../controllers/logout.php" >Logout</a>
+                        </div>
+                </div>  
+            </a>
+            
             </nav>
 
         </header>
             
 
         <main>
-            <?php include 'templates/'. $template .'.phtml' ?>
+
+            <h1>Panneau d'administration</h1>
+            <nav>
+                <a href="../controllers/showArtist.php">Gestion des artistes</a>               
+                <a href="../controllers/showWorksArt.php">Gestion des oeuvres d'art</a>
+                
+            </nav>
         </main>
 
         <footer>
@@ -45,7 +51,26 @@
             <em><p>Site crée par <a href="mailto:audrey94300@hotmail.fr">Audrey Poul</a></p></em>
         </footer>
         
-        <script type="text/javascript" src="public/js/modal.js"></script>
+        
         <script type="text/javascript" src="public/js/slider.js"></script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

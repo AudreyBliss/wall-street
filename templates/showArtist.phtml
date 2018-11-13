@@ -1,6 +1,7 @@
 <div id="showArtist">
     <table class="">
     <a href="addArtist.php">Ajouter un nouvel artiste</a>
+    
         <thead>
             <tr>
                 <th>Nom</th>
@@ -14,7 +15,7 @@
             <?php foreach($artistResult as $artist): ?>
                 <tr>
                     <td><?=htmlspecialchars($artist['nom'])?></td>
-                    <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt=""></td>
+                    <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt="<?=$artist['nom']?>"></td>
                     <td class="description"><?=substr(htmlspecialchars($artist['description']), 0, 50)?></td>
                     
                     <td>

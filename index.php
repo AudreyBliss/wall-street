@@ -17,7 +17,12 @@ require_once 'config/database.php';
 // if en mode ternaire
 // Si la session admin n'est pas vide, alors $admin vaudra '$_SESSION['admin']', sinon  $admin vaudra 'null'
 session_start();
-$admin = array_key_exists('admin', $_SESSION) && !empty($_SESSION['admin']) ? $_SESSION['admin'] : null;
+
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
+
+// $admin = array_key_exists('admin', $_SESSION) && !empty($_SESSION['admin']) ? $_SESSION['admin'] : null;
 // if(!empty($_SESSION['admin'])) {
 //     $admin = $_SESSION['admin'];
 // } else {

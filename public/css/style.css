@@ -1,7 +1,7 @@
-/***************************************************************************************************************************************
-*************************************************MOBILE FIRST*****************************************************************************/
+/***********************************************************************************************************************************************************************
+******************************************************* MOBILE FIRST ***********************************************************************************************/
 
-/***********************************************LAYOUT*******************************************************************************/
+/********************************************************** LAYOUT ***************************************************************************************************/
 *{
     box-sizing: border-box;
 }
@@ -12,35 +12,37 @@ header {
     background-image: url(../img/header.jpg);
     background-position: center center;
 	background-size: cover;
-	height: 145px;
-	
-	   
+	text-align:left;
+	padding-bottom: 5px;
 }
 
-header  div a  {
-	/* display:flex;
-    flex-direction:column;
-	align-items:center; */
-	color:white;
+
+header nav .acceuil  {
 	text-align: center;
-	
 }
 
-header nav   {
-	
-	/* display:flex; */
-	text-align: center;
-	
+header nav .accueil-style {
+	padding: 4px 10px;
+	color: white;
+	text-shadow: 2px 2px 1px black;
+}
+
+header nav .accueil-style:hover{
+	color: black;
+	text-shadow: 2px 2px 1px white;
 }
 
 header img {
 	height: 93px;
 	width: 165px;
-	float: left;
-	margin: 20px 0 9px 9px
-	
+	padding: 9px 0px 2px 15px;
+	transition: transform 0.35s ease;
+    display: block;
 }
 
+header img:hover{
+	transform:scale(1.1);
+}
 
 footer {
     background-color: black;
@@ -58,18 +60,13 @@ footer a:hover{
 }
 
 
-/**********************************************CSS Général****************************************************************************/
+/**************************************************** CSS GENERAL **************************************************************************************************/
 body{
 	margin:0 auto;
 	font-family: 'Poor Story', cursive;
 	line-height:1.4;
 	text-align: center;
-	
 }
-
-/* main{
-	padding: 20px;
-} */
 
 main a{
 	text-align: left;
@@ -79,11 +76,9 @@ main a{
 article p{
 	padding:0 40px;
 	text-align: center;
-
 }
 
 h1{
-	/* text-shadow: 5px 0px 0.2em rgb(150, 8, 39); */
 	text-shadow: 2px 7px 5px rgb(150, 8, 39), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1.6em;
 	padding-top: 30px;
@@ -114,7 +109,7 @@ a{
 	color:black;
 }
 
-/*********************************************PAGE HOME**************************************************************************/
+/******************************************************** PAGE HOME **************************************************************************************************/
 #home{
 	padding: 0 20px;
 }
@@ -124,31 +119,22 @@ a{
     box-shadow: 7px 7px 15px rgba(0,0,1,1);
 }
 
-/*#home .street-art article .fa {
-    display:block;
-}
-*/
-#home .street-art .fas{
-	background-color: none;
-
+#home figcaption{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
 }
 
 
 #home .artistes img {
     width: 100%;
-    height: 90%;
 }
 
-#home figure{
-	/* display: flex; */
-	margin: 0;
+#home .align-button{
+	display: flex;
+	justify-content:space-around;
+	padding: 25px 0;
 }
 
-#home figure .align-button{
-	/* justify-content: center; */
-
-}
-/**************************************PAGE ARTISTE**********************************************************************************************/
+/************************************************************ PAGE ARTISTE ********************************************************************************************/
 
 #artiste .presentation, h3{
 	padding: 0 20px;
@@ -160,23 +146,68 @@ a{
 
 .presentation img, #gallery img{
 	width: 100%;
-	/* padding: 0px; */
 }
 
 
-/****************************************PAGE LOGIN******************************************************************************************************/
+/********************************************************** PAGE LOGIN ********************************************************************************************/
+
+#login {
+	padding: 0 20px;
+	text-align: center;
+}
+
 #login h1{
+	
+	padding-bottom: 30px;
+	font-size: 1.5em;
+}
+
+#login label{
+	padding:15px 0;
 	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+	display: block;
+}
+form{
+	text-align: left;
+	padding: 0 30px;
+}
+ button{
+	display: block;
+	margin-top: 20px;
+	color:white;
+	background-color:rgb(150, 8, 39); 
+	padding: 6px 6px;
+	
 }
 
-#login{
-	background-color: red;
+button:hover{
+	color:rgb(150, 8, 39);
+	background-color:rgba(255, 255, 255, 0.979); 
+}
+/*********************************************************** PAGE ADMIN ************************************************************************************************/
+
+#admin main{
+	padding: 45px 20px;
+
 }
 
-/****************************************PAGE SHOWWORKSART/SHOWARTIST**************************************************************************************************/
+#admin h1{
+	padding-bottom: 36px;
+	font-size: 1.5em;
+}
+
+#admin main a{
+	text-align: center;
+	padding: 33px 40px 40px;
+	font-size: 1.2em;
+}
+#admin nav {
+	display:flex;
+    flex-direction:column;
+}
+/***************************************************** PAGE SHOWWORKSART/SHOWARTIST **********************************************************************************/
 #showWorksArt, #showArtist {
 	margin: 20px 5px;
-	/* text-align: justify; */
 }
 
 #showWorksArt th, #showArtist th {
@@ -185,7 +216,6 @@ a{
 
 #showWorksArt img, #showArtist img{
 	width: 100%;
-	
 }
 
 #showWorksArt .localisation, #showArtist .description{
@@ -199,49 +229,44 @@ a{
 }
 
 
-/**********************************************PAGE ADD ARTIST********************************************************************************************************/
-#add {
-	padding:0 40px;
-}
+/********************************************************** PAGE ADD ARTIST/ ADD WORKSART *****************************************************************************************/
 
-#add textarea{
+#add textarea, #add-oeuvre textarea{
 	width: 100%;
 }
 
-#add ul{
+#add ul, #add-oeuvre ul{
 	padding:0px;
 }
 
-#add li{
+#add li, #add-oeuvre li{
 	list-style-type: none;
 	text-align: left;
 	padding: 20px 0;
 }
 
-#add label, #add input{
+#add label, #add input, #add-oeuvre label, #add-oeuvre input{
 	text-shadow: 1px 0px 5px rgba(0,0,1,1);
 }
 
 #add .bouton_add{
-	border: 2px solid black;
+	border: 1px solid black;
+	margin-left: 10px;
 	padding: 6px 6px;
 	text-shadow: none;
 	color:white;
 	background-color:rgb(150, 8, 39); 
-	align-self: center;
-	
 }
 
-
-/****************************************************************************************************************************************************************************************************************************************TABLETTE****************************************************************************************/
+#add .bouton_add:hover{
+	color:rgb(150, 8, 39);
+	background-color:rgba(255, 255, 255, 0.979);
+}
+/*********************************************************************************************************************************************************************************************************************************** TABLETTE *********************************************************************************************/
 
 @media screen and (min-width:768px){
 
-	/******************************************************LAYOUT***********************************************************************************************/
-
-	header{
-		height: 181px;
-	}
+	/********************************************************* LAYOUT ***********************************************************************************************/
 
 	header img {
 		width: 227px;
@@ -249,16 +274,12 @@ a{
 	}
 
 
-	/******************************************************CSS GENERAL***********************************************************************************************/
+	/****************************************************** CSS GENERAL ***********************************************************************************************/
 
 	main{
-		padding:0 40px;
+		padding:40px 40px;
 	}
 	
-	main a{
-		text-align: end;
-	}
-
 	h1{
 		font-size: 2em;
 	}
@@ -273,36 +294,29 @@ a{
 
 	h4{
 		font-size: 1.2em;
+		text-align: left;
 	}
 
 	/**************************************************** PAGE HOME/ ARTIST *************************************************************************************/
 
-	#artiste figure{
-		display: flex;
-		flex-wrap: wrap;
+	#home .flex-artist img{
+		width:70%;
 	}
+
+	#home .flex-artist img:hover{
+		opacity: 0.7;
+	}
+
 	#artiste figure img, .oeuvre{
-		width:40%;
-		flex-wrap: wrap;
+		width:70%;
 	}
 	
-
-	.artist img, #artist img{
-
-	/* display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    text-align:center; */
-	}
-
-	/************************************************** PAGE SWOWWORKSART/ SHOWARTIST *******************************************************************************/
+	/*********************************************** PAGE SWOWWORKSART/ SHOWARTIST *******************************************************************************/
 
 	#showWorksArt .localisation, #showArtist .description{
 		font-size: 1em;
-		
 	}
 
-	
 	td, th {
 		padding: 0 20px;
 	} 
@@ -310,21 +324,18 @@ a{
 }
 
 
-/*****************************************************************************************************************************************************************************************************************************DESKTOP********************************************************************************************************/
+/************************************************************************************************************************************************************************************************************************************ DESKTOP **********************************************************************************************/
+
 @media screen and (min-width:1024px){
 	
-	/******************************************************LAYOUT***********************************************************************************************/
-
-	header{
-		height: 231px;
-	}
+	/******************************************************** LAYOUT ***********************************************************************************************/
 
 	header img {
 		width: 330px;
 		height:175px;
 	}
 
-	/******************************************************CSS GENERAL***********************************************************************************************/
+	/***************************************************** CSS GENERAL ***********************************************************************************************/
 
 	body{
 		line-height:1.6;
@@ -348,14 +359,14 @@ a{
 		font-size: 1.6em;
 	}
 
-	/************************************************ HOME *******************************************************************************************************/
+	/******************************************************** HOME ****************************************************************************************************/
 	
 	.slider{
 		padding: 0 110px;
 	}
 
 
-/******************************************************ARTISTE *******************************************************************************************************/
+/********************************************************** ARTISTE ***************************************************************************************************/
 
 	.colonne{
 		
@@ -366,13 +377,14 @@ a{
 		width: 45%;
 		padding-top: 12px;
 		float:left;
+		vertical-align: top;
 	}
 
 	.presentation p{
 		float:right;
 		width: 55%;
 		padding-left: 85px;
-	
+		vertical-align: top;
 	}
 
 	article p{
@@ -380,4 +392,71 @@ a{
 	}
 }
 
+/*******************************test modal*******************************************/
+.hide{
+	display:none;
+	opacity:0;
+}
 
+
+
+#gallery{ 
+	/* display:flex; /*permet d'aligner les images*/
+	/*flex-wrap:wrap; /*permet d'aller à la ligne 
+	justify-content:center; centre les images sur chaque ligne */
+}
+
+#gallery figure{
+	cursor:pointer; /*transforme le curseur en pointeur*/
+	margin:20px 0; /*on supprime les mages extérieures gauche et droite*/
+	overflow:hidden; /*servira à masquer les élément qui sortiront des limites de la balise*/
+	padding:20px; 
+	position:relative; /*en prévision de figcaption qui sera en absolute*/
+	/* width:80%; on force à 20% pour avoir 5 images par ligne (20x5 = 100) */
+}
+
+#gallery figure:hover img{
+	opacity:0.5; /*au survol de figure l'image devient transparente*/
+}
+
+#gallery figcaption{
+	background:rgba(255,255,255,0.4); /*fond blanc transparent*/
+	/* opacity:0; Totalement transparent par défaut */
+	padding:10px;
+	/*position:absolute;*/  /*permet de sortir la balise du flux*/
+	top: -85px; /*positionne la balise evrs le haut, en dehors de la balise figure*/
+	left: 20px; /*left et right prenne en compte le padding de 20px de la balise figure...*/
+	right: 20px; /*ainsi figcaption prend toute la largeur de la balise figure, sans déborder de l'image*/
+}
+
+#gallery img{
+	opacity:1; /*opacité maximum par défaut*/
+	width:100%; /*prends tout lespace diponible dans la balise figure */
+}
+
+/*Habillage de la modale*/
+#my-modal{ 
+	background:#fff;
+	border:1px solid #ccc;
+	left:30%;
+	padding:15px;
+	position:absolute;
+	right:30%;
+	text-align:right;
+	top:50px;
+	width:40%;
+}
+
+#my-modal .commandes{ /*positionnement des commandes de la modale*/
+	display:flex;
+	justify-content:space-between;
+}
+
+#my-modal .commandes span{
+	cursor:pointer;
+}
+
+#my-modal img{
+	padding-top:5px;
+	width:100%;
+}

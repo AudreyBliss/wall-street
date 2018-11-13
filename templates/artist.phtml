@@ -16,37 +16,33 @@
 
     <section id="gallery">
         <h3>Les oeuvres</h3>
-        <?php foreach($worksartResult as $worksart): ?>
-            <a href="#">
+        <div class="flex-oeuvre">
+            <?php foreach($worksartResult as $worksart): ?>
+                
                 <figure>
-                    <div class="oeuvres">
-                        <img  src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>" alt="<?= $worksart['titre']  ?>">
-                        <figcaption><?= $worksart['titre'] ?></figcaption>
-                    </div>   
-                </figure>
-            </a>
-        <?php endforeach; ?>
+                    <a href="#"><img  src="<?= $pathToPic ?>/worksart/<?= $worksart['photo'] ?>"  data-title="<?= $worksart['titre'] ?>" data-geo="<?= $worksart['localisation'] ?>" alt="<?= $worksart['titre']  ?>"></a>
+                    <figcaption><a href="#"><?= $worksart['titre'] ?></a></figcaption>      
+                </figure> 
+                
+            <?php endforeach; ?>
+        </div>
     </section>
-</div>
+   
     
-    
-     <!-- <div id="my-modal" class="hide">
-			<div class="commandes">
-				<div class="prev-next">
-					<span>< Prev</span>
-					<span> | </span>
-					<span>Next ></span>
-				</div>
-				<span class="close-modal">FERMER X</span>
-			</div>
 			
-			<img src="" alt="" />
-        </div> !-->
-        
-        
+	<div id="my-modal" class="hide">
+		<div class="commandes">
+			<span class="close-modal">FERMER X</span>
+		</div>
+        <h2></h2>
+        <img src="" alt="">
+            <!-- <img  src="<?= $pathToPic ?>/worksart/" alt=""> -->
+        <p></p>
+	</div>
 
-  
-        
+    
+</div>
+
 
 
 
