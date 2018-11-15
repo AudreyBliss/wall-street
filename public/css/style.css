@@ -152,7 +152,7 @@ a{
 }
 
 .presentation img, #gallery img{
-	width: 100%;
+	width: 75%;
 }
 
 
@@ -288,7 +288,7 @@ button:hover{
 	/****************************************************** CSS GENERAL ***********************************************************************************************/
 
 	main{
-		padding:40px 40px;
+		padding:40px 0;
 	}
 	
 	h1{
@@ -319,7 +319,7 @@ button:hover{
 	}
 
 	#artiste figure img, .oeuvre{
-		width:70%;
+		width:60;
 	}
 	
 	/*********************************************** PAGE SWOWWORKSART/ SHOWARTIST *******************************************************************************/
@@ -415,7 +415,9 @@ button:hover{
 	/* display:flex; /*permet d'aligner les images*/
 	/*flex-wrap:wrap; /*permet d'aller à la ligne 
 	justify-content:center; centre les images sur chaque ligne */
+	/* text-align: center; */
 }
+
 
 #gallery figure{
 	cursor:pointer; /*transforme le curseur en pointeur*/
@@ -432,7 +434,7 @@ button:hover{
 
 #gallery figcaption{
 	background:rgba(255,255,255,0.4); /*fond blanc transparent*/
-	/* opacity:0; Totalement transparent par défaut */
+	 /* opacity:0; Totalement transparent par défaut */
 	padding:10px;
 	/*position:absolute;*/  /*permet de sortir la balise du flux*/
 	top: -85px; /*positionne la balise evrs le haut, en dehors de la balise figure*/
@@ -442,29 +444,47 @@ button:hover{
 
 #gallery img{
 	opacity:1; /*opacité maximum par défaut*/
-	width:100%; /*prends tout lespace diponible dans la balise figure */
+	/* width:100%; prends tout lespace diponible dans la balise figure */
 }
 
+/* .center{
+	text-align: center;
+} */
 /*Habillage de la modale*/
 #my-modal{ 
 	background:#fff;
 	border:1px solid #ccc;
-	left:30%;
+	left:6%;
 	padding:15px;
 	position:absolute;
 	right:30%;
-	text-align:right;
-	top:50px;
-	width:40%;
+	/* text-align:right; */
+	top:284px;
+	width:90%;
+	/* margin: 0 15px; */
+	box-shadow: 7px 7px 15px rgba(0,0,1,1);
+}
+
+#my-modal h2{
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#my-modal p{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
 }
 
 #my-modal .commandes{ /*positionnement des commandes de la modale*/
-	display:flex;
-	justify-content:space-between;
+	/* display:flex; */
+	/* justify-content:space-between; */
+	text-align: right;
 }
 
 #my-modal .commandes span{
 	cursor:pointer;
+	/* text-align: right; */
 }
 
 #my-modal img{

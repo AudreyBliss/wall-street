@@ -19,7 +19,7 @@ function modalOpen(){
 		//injecte les données dans les attribut	
 			imgModal.setAttribute("src",srcValue);
             imgModal.setAttribute("alt",altValue);
-        //injecte les données dans les palises html
+        //injecte les données dans les balises html
             h2Modal.innerHTML = dataTitleValue;
             pModal.innerHTML = dataGeoValue;
 			modal.classList.remove("hide");
@@ -34,6 +34,7 @@ function modalClose(){
 	});
 }
 
+//execution des fonctionss
 document.addEventListener("DOMContentLoaded", function(){
 	modalOpen();  modalClose();
 });
