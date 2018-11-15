@@ -59,11 +59,8 @@ if (isset($error))
 
 
 $template = 'login';
-// include '../templates/login.phtml';
-include '../layout.phtml';
 
-// INSERT INTO 'admin' ('id', 'email', 'password') VALUES
-//(2, 'admin', '$2y$10$y.x0AzafXw82Qw3LEXLMbOdpQMRyRlXP7j//P7rk17El8rtMBAVBi');
+include '../layout.phtml';
 
 
 

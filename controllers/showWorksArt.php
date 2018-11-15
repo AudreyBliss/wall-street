@@ -4,7 +4,7 @@ require_once '../config/database.php';
 
 
 try{
-    // récupération d'es oeuvres d'art
+    // Récupération de toutes les données des oeuvres d'art
     $worksart = $pdo->prepare('Select * From oeuvre');
     $worksart->execute();
     $worksartResult = $worksart->fetchAll();

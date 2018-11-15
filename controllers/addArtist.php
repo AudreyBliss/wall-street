@@ -49,7 +49,7 @@ $verifArtist = $imageArtist->rowCount();
 
 
 }else{
-$isEmpty = 'Tous les champs doivent être complétés';
+    $isEmpty = 'Tous les champs doivent être complétés';
 }
 
 

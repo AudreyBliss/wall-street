@@ -9,9 +9,7 @@ require_once '../config/database.php';
       exit();
   }
 
-  
-
-  // Suppression d'un article du blog.
+  // Suppression d'une oeuvre d'art.
   $query =
   '
       DELETE FROM
@@ -22,7 +20,7 @@ require_once '../config/database.php';
   $resultSet = $pdo->prepare($query);
   $resultSet->execute([$_GET['id']]);
 
-  // Redirection vers le panneau d'administration.
+  // Redirection vers la geston des oeuvres d'art.
   header('Location: showWorksArt.php');
   exit();
 

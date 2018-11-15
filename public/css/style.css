@@ -6,16 +6,13 @@
     box-sizing: border-box;
 }
 
-
 header {
-    
     background-image: url(../img/header.jpg);
     background-position: center center;
 	background-size: cover;
 	text-align:left;
 	padding-bottom: 5px;
 }
-
 
 header nav .accueil  {
 	text-align: center;
@@ -32,6 +29,7 @@ header nav .accueil-style:hover{
 	color: black;
 	text-shadow: 2px 2px 1px white;
 }
+
 
 header img {
 	height: 93px;
@@ -67,14 +65,7 @@ body{
 	font-family: 'Poor Story', cursive;
 	line-height:1.4;
 	text-align: center;
-	/* width: 100%; */
 }
-
-main{
-	/* background-image: url(../img/mur2.jpg);
-    background-position: center center;
-	/* background-size: cover; */
- }
 
 main a{
 	text-align: left;
@@ -100,7 +91,6 @@ h2{
 h3{
 	text-shadow: 2px 7px 5px rgb(71, 122, 227), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1em;
-	/* padding: 20px 0; */
 }
 
 h1, h2, h3,h4{
@@ -143,10 +133,6 @@ a{
 
 /************************************************************ PAGE ARTISTE ********************************************************************************************/
 
-#artiste .presentation, h3{
-	padding: 10px 20px;
-} 
-
 #gallery{
 	margin-top: 40px;
 }
@@ -155,7 +141,68 @@ a{
 	width: 75%;
 }
 
+.presentation, #gallery{
+	padding:0 20px;
+}
 
+.hide{
+	display:none;
+	opacity:0;
+}
+
+#gallery figure{
+	cursor:pointer; 
+	margin:20px 0; 
+	overflow:hidden; 
+	position:relative; 
+}
+
+#gallery figure:hover img{
+	opacity:0.5;
+}
+
+#gallery figcaption{
+	padding:10px;
+	top: -85px; 
+	left: 20px; 
+	right: 20px; 
+}
+
+#my-modal{ 
+	background:#fff;
+	border:1px solid #ccc;
+	left:6%;
+	padding:15px;
+	position:absolute;
+	right:30%;
+	top:284px;
+	width:90%;
+	box-shadow: 7px 7px 15px rgba(0,0,1,1);
+}
+
+#my-modal h2{
+	text-align: center;
+	font-size: 1.1em;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+#my-modal p{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+}
+
+#my-modal .commandes{ 
+	text-align: right;
+}
+
+#my-modal .commandes span{
+	cursor:pointer;
+}
+
+#my-modal img{
+	padding-top:5px;
+	width:100%;
+}
 /********************************************************** PAGE LOGIN ********************************************************************************************/
 
 #login {
@@ -191,7 +238,7 @@ button:hover{
 	color:rgb(150, 8, 39);
 	background-color:rgba(255, 255, 255, 0.979); 
 }
-/*********************************************************** PAGE ADMIN ************************************************************************************************/
+/*********************************************************** PAGE ADMIN **********************************************************************************************/
 
 #admin main{
 	padding: 45px 20px;
@@ -213,6 +260,7 @@ button:hover{
     flex-direction:column;
 }
 /***************************************************** PAGE SHOWWORKSART/SHOWARTIST **********************************************************************************/
+
 #showWorksArt, #showArtist {
 	margin: 20px 5px;
 	
@@ -240,7 +288,7 @@ button:hover{
 	text-shadow: 1px 0px 5px rgba(0,0,1,1);
 }
 
-/********************************************************** PAGE ADD ARTIST/ ADD WORKSART *****************************************************************************************/
+/********************************************************** PAGE ADD ARTIST/ ADD WORKSART *****************************************************************************/
 
 #add textarea, #add-oeuvre textarea{
 	width: 100%;
@@ -311,7 +359,7 @@ button:hover{
 	/**************************************************** PAGE HOME/ ARTIST *************************************************************************************/
 
 	#home .flex-artist img{
-		width:70%;
+		width:62%;
 	}
 
 	#home .flex-artist img:hover{
@@ -319,7 +367,7 @@ button:hover{
 	}
 
 	#artiste figure img, .oeuvre{
-		width:60;
+		width:60%;
 	}
 	
 	/*********************************************** PAGE SWOWWORKSART/ SHOWARTIST *******************************************************************************/
@@ -377,10 +425,13 @@ button:hover{
 	}
 
 
-/********************************************************** ARTISTE ***************************************************************************************************/
+   /********************************************************** ARTISTE ***********************************************************************************************/
+
+   .presentation, #gallery{
+	padding:0 50px;
+	}
 
 	.colonne{
-		
 		display:inline-block;
 	}
 
@@ -403,91 +454,3 @@ button:hover{
 	}
 }
 
-/*******************************test modal*******************************************/
-.hide{
-	display:none;
-	opacity:0;
-}
-
-
-
-#gallery{ 
-	/* display:flex; /*permet d'aligner les images*/
-	/*flex-wrap:wrap; /*permet d'aller à la ligne 
-	justify-content:center; centre les images sur chaque ligne */
-	/* text-align: center; */
-}
-
-
-#gallery figure{
-	cursor:pointer; /*transforme le curseur en pointeur*/
-	margin:20px 0; /*on supprime les mages extérieures gauche et droite*/
-	overflow:hidden; /*servira à masquer les élément qui sortiront des limites de la balise*/
-	padding:20px; 
-	position:relative; /*en prévision de figcaption qui sera en absolute*/
-	/* width:80%; on force à 20% pour avoir 5 images par ligne (20x5 = 100) */
-}
-
-#gallery figure:hover img{
-	opacity:0.5; /*au survol de figure l'image devient transparente*/
-}
-
-#gallery figcaption{
-	background:rgba(255,255,255,0.4); /*fond blanc transparent*/
-	 /* opacity:0; Totalement transparent par défaut */
-	padding:10px;
-	/*position:absolute;*/  /*permet de sortir la balise du flux*/
-	top: -85px; /*positionne la balise evrs le haut, en dehors de la balise figure*/
-	left: 20px; /*left et right prenne en compte le padding de 20px de la balise figure...*/
-	right: 20px; /*ainsi figcaption prend toute la largeur de la balise figure, sans déborder de l'image*/
-}
-
-#gallery img{
-	opacity:1; /*opacité maximum par défaut*/
-	/* width:100%; prends tout lespace diponible dans la balise figure */
-}
-
-/* .center{
-	text-align: center;
-} */
-/*Habillage de la modale*/
-#my-modal{ 
-	background:#fff;
-	border:1px solid #ccc;
-	left:6%;
-	padding:15px;
-	position:absolute;
-	right:30%;
-	/* text-align:right; */
-	top:284px;
-	width:90%;
-	/* margin: 0 15px; */
-	box-shadow: 7px 7px 15px rgba(0,0,1,1);
-}
-
-#my-modal h2{
-	text-align: center;
-	font-size: 1.1em;
-	margin-top: 0;
-	padding-top: 0;
-}
-
-#my-modal p{
-	text-shadow: 1px 0px 5px rgba(0,0,1,1);
-}
-
-#my-modal .commandes{ /*positionnement des commandes de la modale*/
-	/* display:flex; */
-	/* justify-content:space-between; */
-	text-align: right;
-}
-
-#my-modal .commandes span{
-	cursor:pointer;
-	/* text-align: right; */
-}
-
-#my-modal img{
-	padding-top:5px;
-	width:100%;
-}

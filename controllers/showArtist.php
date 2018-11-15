@@ -4,7 +4,7 @@ require_once '../config/database.php';
 
 
 try{
-    // Test de récupération d'un artist
+    // Récupération de toutes les données des artistes
     $artist = $pdo->prepare('Select * From artiste');
     $artist->execute();
     $artistResult = $artist->fetchAll();

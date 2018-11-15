@@ -4,7 +4,7 @@ require_once '../config/database.php';
 
 if(array_key_exists('id', $_GET) && ctype_digit($_GET['id'])) {
     
-    // Get Artist
+    // Récupération de l'artiste sur lequel on à cliquer via son id
     try {
         $artist = $pdo->prepare('
             SELECT
@@ -21,7 +21,7 @@ if(array_key_exists('id', $_GET) && ctype_digit($_GET['id'])) {
         ]);
         $artist = $artist->fetch();
         
-        // Get Oeuvres
+        // Récupération des oeuvres de l'artistes
         $worksart = $pdo->prepare('
             SELECT
                 titre,
