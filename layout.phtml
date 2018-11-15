@@ -23,18 +23,13 @@
                 <a href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">
                         <img src="<?= $template !== 'home' ? '../public/img/logol2.png' : 'public/img/logol2.png '?>" alt="Wall-Street"/>
                 </a>
-                
-                    <!-- Nav user -->
-                    
-                    <div class="acceuil">
-                        <a class="accueil-style" href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
-                    </div>
-                
+                <div class="accueil">  
+                    <a class="accueil-style" href="<?= $template !== 'home' ? '../index' : 'index' ?>.php">Accueil</a>
+                </div>
             </nav>
 
         </header>
             
-
         <main>
             <?php include 'templates/'. $template .'.phtml' ?>
         </main>
@@ -45,7 +40,8 @@
             <em><p>Site crée par <a href="mailto:audrey94300@hotmail.fr">Audrey Poul</a></p></em>
         </footer>
         
-        <script type="text/javascript" src="public/js/modal.js"></script>
+        <script type="text/javascript" src="../public/js/modal.js"></script>
         <script type="text/javascript" src="public/js/slider.js"></script>
     </body>
+    
 </html>

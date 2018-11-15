@@ -1,11 +1,10 @@
 <?php
-$admin = null;
 
 require_once '../config/database.php';
 
 
 try{
-    // Test de récupération d'un artist, et je dis bien 1 One
+    // Test de récupération d'un artist
     $artist = $pdo->prepare('Select * From artiste');
     $artist->execute();
     $artistResult = $artist->fetchAll();
@@ -20,4 +19,4 @@ try{
 
 $template = 'showArtist';
 
-include '../layout.phtml';
+include '../layout-admin.phtml';

@@ -14,7 +14,7 @@
         <tbody>
             <?php foreach($artistResult as $artist): ?>
                 <tr>
-                    <td><?=htmlspecialchars($artist['nom'])?></td>
+                    <td class="shadow"><?=htmlspecialchars($artist['nom'])?></td>
                     <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt="<?=$artist['nom']?>"></td>
                     <td class="description"><?=substr(htmlspecialchars($artist['description']), 0, 50)?></td>
                     

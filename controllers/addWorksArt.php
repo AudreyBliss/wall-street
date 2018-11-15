@@ -2,7 +2,6 @@
 
 require_once '../config/database.php';
 
-$admin = null;
 $message = null;
 $isEmpty = null;
 

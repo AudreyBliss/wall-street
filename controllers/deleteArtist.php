@@ -9,7 +9,6 @@ require_once '../config/database.php';
       exit();
   }
 
-  
 
   // Suppression d'un article du blog.
   $query =

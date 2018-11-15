@@ -17,11 +17,12 @@ header {
 }
 
 
-header nav .acceuil  {
+header nav .accueil  {
 	text-align: center;
 }
 
 header nav .accueil-style {
+	text-align: center;
 	padding: 4px 10px;
 	color: white;
 	text-shadow: 2px 2px 1px black;
@@ -66,7 +67,14 @@ body{
 	font-family: 'Poor Story', cursive;
 	line-height:1.4;
 	text-align: center;
+	/* width: 100%; */
 }
+
+main{
+	/* background-image: url(../img/mur2.jpg);
+    background-position: center center;
+	/* background-size: cover; */
+ }
 
 main a{
 	text-align: left;
@@ -81,7 +89,6 @@ article p{
 h1{
 	text-shadow: 2px 7px 5px rgb(150, 8, 39), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1.6em;
-	padding-top: 30px;
 }
 
 h2{
@@ -93,7 +100,7 @@ h2{
 h3{
 	text-shadow: 2px 7px 5px rgb(71, 122, 227), 8px 10px 0px rgba(0,0,0,0.15);
 	font-size: 1em;
-	padding: 20px 0;
+	/* padding: 20px 0; */
 }
 
 h1, h2, h3,h4{
@@ -137,7 +144,7 @@ a{
 /************************************************************ PAGE ARTISTE ********************************************************************************************/
 
 #artiste .presentation, h3{
-	padding: 0 20px;
+	padding: 10px 20px;
 } 
 
 #gallery{
@@ -208,6 +215,7 @@ button:hover{
 /***************************************************** PAGE SHOWWORKSART/SHOWARTIST **********************************************************************************/
 #showWorksArt, #showArtist {
 	margin: 20px 5px;
+	
 }
 
 #showWorksArt th, #showArtist th {
@@ -228,6 +236,9 @@ button:hover{
 	padding-bottom: 30px
 }
 
+#showArtist .shadow{
+	text-shadow: 1px 0px 5px rgba(0,0,1,1);
+}
 
 /********************************************************** PAGE ADD ARTIST/ ADD WORKSART *****************************************************************************************/
 

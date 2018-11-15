@@ -1,7 +1,5 @@
 <?php
 
-$admin = null;
-
 require_once '../config/database.php';
 
 if(array_key_exists('id', $_GET) && ctype_digit($_GET['id'])) {

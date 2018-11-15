@@ -8,10 +8,9 @@
             <figure id="slider" class="slider">
                 <img src="" alt="Photo du slider">
                 <div class="align-button">
-                    
                     <a id="slider-previous" title="Image précédente "><i class="fas fa-angle-left"></i></a>
                     <figcaption></figcaption>
-                  <a id="slider-next" title="Image suivante "><i class="fas fa-angle-right"></i></a>
+                    <a id="slider-next" title="Image suivante "><i class="fas fa-angle-right"></i></a>
                 </div>
             </figure>
             
@@ -30,10 +29,8 @@
             <?php foreach($artistResult as $artist): ?>
                 
                     <div>        
-                    
                         <h4><a href="/wall-street/controllers/artist.php?id=<?= $artist['id'] ?>"><?= $artist['nom'] ?></a></h4>
                         <a href="/wall-street/controllers/artist.php?id=<?= $artist['id'] ?>"><img src="public/img/artist/<?= $artist['photo'] ?>" alt="<?= $artist['nom'] ?>"></a>
-                    
                     </div>
                 
             <?php endforeach; ?>
