@@ -18,6 +18,12 @@ try{
     echo "Une erreur est survenue : {$e->getMessage()} <br> Voici son code erreur {$e->getCode()}";
 }
 
-$template = 'showArtist';
 
-include '../layout-admin.phtml';
+if(array_key_exists('admin',$_SESSION)){ 
+    include '../layout-admin.phtml';
+}
+else{
+    header('Location: ../index.php'); 
+}
+
+$template = 'showArtist'
