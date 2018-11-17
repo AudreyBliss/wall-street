@@ -26,4 +26,4 @@ else{
     header('Location: ../index.php'); 
 }
 
-$template = 'showArtist'
+$template = 'showArtist';
