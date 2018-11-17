@@ -62,9 +62,9 @@ try{
         }
     }
 
-    }catch(DomainException $e) {
+}catch(DomainException $e) {
         echo "Une erreure est survenue : {$e->getMessage()} <br> Voici son code erreur {$e->getCode()}";
-    }
+}
 
 
 include '../layout-admin.phtml';
