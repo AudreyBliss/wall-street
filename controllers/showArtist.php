@@ -21,9 +21,10 @@ try{
 
 if(array_key_exists('admin',$_SESSION)){ 
     include '../layout-admin.phtml';
+    $template = 'showArtist';
 }
 else{
     header('Location: ../index.php'); 
 }
 
-$template = 'showArtist';
+
