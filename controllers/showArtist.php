@@ -27,5 +27,5 @@ else{
     header('Location: ../index.php'); 
 }
 
-// $template = 'showArtist';
+
 include '../layout-admin.phtml';
