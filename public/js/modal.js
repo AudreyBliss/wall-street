@@ -1,6 +1,7 @@
 var figures = document.querySelectorAll("#gallery figure");
 var nbFigures = figures.length;
 var modal = document.querySelector("#my-modal");
+var bgModal = document.querySelector(".background-modal");
 var imgModal = document.querySelector("#my-modal img")
 var closeModal = document.querySelector("#my-modal .close-modal");
 var h2Modal =  document.querySelector("#my-modal h2");
@@ -21,7 +22,8 @@ function modalOpen(){
             imgModal.setAttribute("alt",altValue);
         //injecte les données dans les balises html
             h2Modal.innerHTML = dataTitleValue;
-            pModal.innerHTML = dataGeoValue;
+			pModal.innerHTML = dataGeoValue;
+			bgModal.classList.remove("hide");
 			modal.classList.remove("hide");
 		});
 	}
@@ -31,6 +33,7 @@ function modalOpen(){
 function modalClose(){
 	closeModal.addEventListener("click", function(){
 		modal.classList.add("hide");
+		bgModal.classList.add("hide");
 	});
 }
 

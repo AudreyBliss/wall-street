@@ -2,6 +2,7 @@
 ******************************************************* MOBILE FIRST ***********************************************************************************************/
 
 /********************************************************** LAYOUT ***************************************************************************************************/
+
 *{
     box-sizing: border-box;
 }
@@ -14,9 +15,15 @@ header {
 	padding-bottom: 5px;
 }
 
-header nav .accueil  {
+header nav .accueil, .accueil-admin{
 	text-align: center;
 }
+
+/* .accueil-admin{
+	display:flex;
+	flex-direction: column;
+	text-align: start;
+} */
 
 header nav .accueil-style {
 	text-align: center;
@@ -29,7 +36,6 @@ header nav .accueil-style:hover{
 	color: black;
 	text-shadow: 2px 2px 1px white;
 }
-
 
 header img {
 	height: 93px;
@@ -60,6 +66,7 @@ footer a:hover{
 
 
 /**************************************************** CSS GENERAL **************************************************************************************************/
+
 body{
 	margin:0 auto;
 	font-family: 'Poor Story', cursive;
@@ -73,7 +80,7 @@ main a{
 }
 
 article p{
-	padding:0 40px;
+	padding:10px 25px;
 	text-align: center;
 }
 
@@ -106,7 +113,13 @@ a{
 	color:black;
 }
 
+form{
+	text-align: left;
+	padding: 0 30px;
+}
+
 /******************************************************** PAGE HOME **************************************************************************************************/
+
 #home{
 	padding: 0 20px;
 }
@@ -175,16 +188,17 @@ a{
 	padding:15px;
 	position:absolute;
 	right:30%;
-	top:284px;
+	top:50px;
 	width:90%;
 	box-shadow: 7px 7px 15px rgba(0,0,1,1);
 }
 
 #my-modal h2{
 	text-align: center;
-	font-size: 1.1em;
+	font-size: 1.2em;
 	margin-top: 0;
 	padding-top: 0;
+	text-shadow: 2px 7px 5px rgb(71, 122, 227), 8px 10px 0px rgba(0,0,0,0.15);
 }
 
 #my-modal p{
@@ -202,6 +216,15 @@ a{
 #my-modal img{
 	padding-top:5px;
 	width:100%;
+}
+
+.background-modal{
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	top:0;
+	right:0;
+	bottom: 0;
+	left:0;
 }
 /********************************************************** PAGE LOGIN ********************************************************************************************/
 
@@ -221,11 +244,16 @@ a{
 	text-shadow: 1px 0px 5px rgba(0,0,1,1);
 	display: block;
 }
-form{
-	text-align: left;
-	padding: 0 30px;
+
+
+#login form{
+	margin-left:auto;
+	margin-right:auto;
+	width: 310px;
+	margin-bottom: 20px;
 }
- button{
+ 
+button{
 	display: block;
 	margin-top: 20px;
 	color:white;
@@ -358,6 +386,10 @@ button:hover{
 
 	/**************************************************** PAGE HOME/ ARTIST *************************************************************************************/
 
+	#home{
+		padding: 0 40px;
+	}
+
 	#home .flex-artist img{
 		width:62%;
 	}
@@ -383,7 +415,7 @@ button:hover{
 }
 
 
-/************************************************************************************************************************************************************************************************************************************ DESKTOP **********************************************************************************************/
+/*********************************************************************************************************************************************************************************************************************************** DESKTOP **********************************************************************************************/
 
 @media screen and (min-width:1024px){
 	
@@ -440,13 +472,12 @@ button:hover{
 		padding-top: 12px;
 		float:left;
 		vertical-align: top;
+		margin-right:30px;
 	}
 
 	.presentation p{
-		float:right;
-		width: 55%;
-		padding-left: 85px;
-		vertical-align: top;
+	vertical-align: top;
+	text-align: left;
 	}
 
 	article p{

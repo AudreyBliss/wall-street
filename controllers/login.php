@@ -1,14 +1,20 @@
 <?php
 // Dépendances
+session_start();
+
 require_once '../config/database.php';
+
 
 
 if(isset($_POST) && !empty($_POST))
 {
      
-    if(!empty(htmlspecialchars($_POST['email'])) && !empty(sha1($_POST['password'])))
+    if(array_key_exists('email',$_POST) && array_key_exists('password',$_POST))
     {   
-        $_POST['password'] = sha1($_POST['password']);
+        
+        $email = strip_tags($_POST['email']);
+        $password = strip_tags($_POST['password']);
+        $password = sha1($password); 
         
         $req = $pdo->prepare(
             '
@@ -21,8 +27,8 @@ if(isset($_POST) && !empty($_POST))
 
         $req->execute([
             
-            'email' => $_POST['email'],
-            'password' => $_POST['password']
+            'email' => $email,
+            'password' => $password
             
         ]);
 
@@ -31,31 +37,19 @@ if(isset($_POST) && !empty($_POST))
         
         if($admin)
         {
-            $_SESSION['admin'] = $_POST['email'];
+            $_SESSION['admin'] = $email;
 
-            header('location:../templates/admin.phtml');
+            header('location:../controllers/admin.php');
         }
         else
         {
-            $error = 'Identifiant incorrect !';
+            $error = 'Mot de passe ou email incorrect !';
         }
 
-        if($_POST['password'] != ['password'])
-        {
-            $error = 'Mot de passe incorrect !';
-        }
     }
 
-    else
-    {
-        $error = 'Veuillez remplir tout les champs !';
-    }
 }
 
-if (isset($error))
-{
-    echo '<span class="erreur">'. $error .'</span>';
-}
 
 
 $template = 'login';
