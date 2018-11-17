@@ -4,8 +4,6 @@ session_start();
 
 require_once '../config/database.php';
 
-
-
 $message = null;
 $isEmpty = null;
 
@@ -53,11 +51,17 @@ $verifArtist = $imageArtist->rowCount();
 
 }else{
     $isEmpty = 'Tous les champs doivent être complétés';
+
+    if(array_key_exists('admin',$_SESSION)){ 
+        $template = 'addArtist';
+        
+    }
+    else{
+        header('Location: ../index.php'); 
+    }
 }
 
 
-
-$template = 'addArtist';
 
 include '../layout-admin.phtml';
 
