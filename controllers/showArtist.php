@@ -20,7 +20,7 @@ try{
 
 
 if(array_key_exists('admin',$_SESSION)){ 
-    include '../layout-admin.phtml';
+    $template = 'showArtist';
     
 }
 else{
@@ -28,3 +28,4 @@ else{
 }
 
 $template = 'showArtist';
+include '../layout-admin.phtml';
