@@ -33,8 +33,9 @@ try{
                 if(move_uploaded_file($file_tmp_name, $file_destination)){  
                     
                     $req = $pdo->prepare("INSERT INTO artiste (nom, photo, description) VALUES(?, ?, ?)");		
-                    $test = $req->execute(array($nom, $file_name, $description));
-                    var_dump($test);die;
+                    // $test =
+                     $req->execute(array($nom, $file_name, $description));
+                    // var_dump($test);die;
                         $message = "Téléchargement terminé";
 
                         header('location:showArtist.php');
