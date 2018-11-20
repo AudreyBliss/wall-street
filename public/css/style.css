@@ -19,11 +19,6 @@ header nav .accueil, .accueil-admin{
 	text-align: center;
 }
 
-/* .accueil-admin{
-	display:flex;
-	flex-direction: column;
-	text-align: start;
-} */
 
 header nav .accueil-style {
 	text-align: center;

@@ -23,6 +23,7 @@ try{
 
     $imageArtist = $pdo->prepare('SELECT * FROM artiste WHERE photo = ?');   
     $imageArtist->execute(array($file_destination));
+    
     $verifArtist = $imageArtist->rowCount();   
         /* n'apparait pas donc le fichier peut être uploader */
         if($verifArtist == 0){	
@@ -31,7 +32,8 @@ try{
                 if(move_uploaded_file($file_tmp_name, $file_destination)){  
                     
                     $req = $pdo->prepare("INSERT INTO artiste (nom, photo, description) VALUES(?, ?, ?)");		
-                    $req->execute(array($nom, $file_name, $description));
+                    $test = $req->execute(array($nom, $file_name, $description));
+                    var_dump($test);die;
                         $message = "Téléchargement terminé";
 
                         header('location:showArtist.php');
