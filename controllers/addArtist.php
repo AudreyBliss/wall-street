@@ -29,6 +29,7 @@ try{
         if($verifArtist == 0){	
             if(in_array($file_extension, $valid_extensions)){
         /* déplace le fichier de son emplacement temporaire vers la bdd */
+        //a la plac du if plutôt un try catch
                 if(move_uploaded_file($file_tmp_name, $file_destination)){  
                     
                     $req = $pdo->prepare("INSERT INTO artiste (nom, photo, description) VALUES(?, ?, ?)");		
@@ -37,7 +38,7 @@ try{
                         $message = "Téléchargement terminé";
 
                         header('location:showArtist.php');
-        
+        //catch a la place du else
                 }else{
                     $message = 'L\'image n\'a pas pu se télécharger';
                 }
