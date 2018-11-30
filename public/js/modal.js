@@ -37,7 +37,7 @@ function modalClose(){
 	});
 }
 
-//execution des fonctionss
+//execution des fonctions
 document.addEventListener("DOMContentLoaded", function(){
 	modalOpen();  modalClose();
 });

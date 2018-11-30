@@ -1,7 +1,7 @@
 <div id="showArtist">
-<h1>Gestion des artistes</h1>
+    <h1>Gestion des artistes</h1>
     <table>
-    <a href="addArtist.php">Ajouter un nouvel artiste</a>
+        <a href="addArtist.php">Ajouter un nouvel artiste</a>
     
         <thead>
             <tr>
@@ -18,10 +18,8 @@
                     <td class="shadow"><?=htmlspecialchars($artist['nom'])?></td>
                     <td ><img src="../public/img/artist/<?= $artist['photo'] ?>" alt="<?=$artist['nom']?>"></td>
                     <td class="description"><?=substr(htmlspecialchars($artist['description']), 0, 50)?></td>
-                    
                     <td>
-                    
-                        <a href="deleteArtist.php?id=<?=intval($artist['id'])?>"><i class="fas fa-times"></i></a>
+                    <a href="deleteArtist.php?id=<?=intval($artist['id'])?>"><i class="fas fa-times"></i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>
