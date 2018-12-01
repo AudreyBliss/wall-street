@@ -1,2 +1,3 @@
-Options -Indexes
-AllowOverride 
+# Options -Indexes
+# AllowOverride 
+deny from all
