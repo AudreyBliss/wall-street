@@ -4,8 +4,8 @@ try {
 	$pdo = new PDO
 	(
 		'mysql:host=localhost;dbname=wall_street;charset=UTF8',
-		'root',
-		'',
+		'audrey',
+		'$Wolverine60250',
 		[
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 			PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
